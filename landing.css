@@ -1,0 +1,19 @@
+body{
+    background-image: url(https://t4.ftcdn.net/jpg/03/17/72/83/360_F_317728377_sCPKkOYg94Vzb7v0kFgLvEE1Py1JZ6eI.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+button{
+    display: auto;
+    font-size: 40p;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

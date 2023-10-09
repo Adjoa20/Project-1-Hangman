@@ -1,0 +1,62 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/59/23/6d/59236d433fa027d1cab4e2121de3da89.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+button{
+    display: auto;
+    font-size: 40p;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#AlphabetKeyboard{
+
+}
+#main-menu{
+    background-color: bisque;
+    text-align: center;
+    color: black;
+}
+
+#fashion-game{
+    background-color: bisque;
+    text-align: center;
+    color: black;
+}
+
+#music-game{
+    background-color: bisque;
+    text-align: center;
+    color: black;
+}
+
+#movie-game{
+    background-color:deepskyblue;
+    text-align: center;
+    color: black;
+
+}
+
+#tv-game{
+    background-color: black;
+    text-align: center;
+    color: white;
+
+}
+
+#celebrities-game{
+    background-color: black;
+    text-align: center;
+    color: white;
+
+}
