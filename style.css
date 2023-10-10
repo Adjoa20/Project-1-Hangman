@@ -23,40 +23,48 @@ button{
 
 }
 #main-menu{
-    background-color: bisque;
+    background-color: black;
     text-align: center;
-    color: black;
+    color: whitesmoke;
 }
 
 #fashion-game{
-    background-color: bisque;
+    background-color: black;
     text-align: center;
-    color: black;
+    color: whitesmoke;
 }
 
 #music-game{
-    background-color: bisque;
+    background-color: black;
     text-align: center;
-    color: black;
+    color: whitesmoke;
 }
 
 #movie-game{
-    background-color:deepskyblue;
+    background-color: black;
     text-align: center;
-    color: black;
+    color: whitesmoke;
 
 }
 
 #tv-game{
     background-color: black;
     text-align: center;
-    color: white;
+    color: whitesmoke;
 
 }
 
 #celebrities-game{
     background-color: black;
     text-align: center;
-    color: white;
+    color: whitesmoke;
 
+}
+
+.square{
+    background-color: black;
+    height: 250px;
+    width: 250px;
+    justify-content: center;
+    align-items: flex-end;
 }

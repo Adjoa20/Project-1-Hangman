@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="landing.css">
     <title>Hangman</title>
 </head>
@@ -13,8 +14,16 @@
         <h1>PLAY HANGMAN</h1>
     </a>
 
+    <h2>Let's Play A Game</h2>
+    <h3>Hangman The Ultimate Classic Game Where You Have Guess The Word</h3>
+
     <button class="game" onclick="" id="play-game">PLAY GAME</button>
-    <button class="user" onclick="" id="user-name">USER NAME</button>
+    <br>
+
+    <button class="user" onclick="submitFunction()" id="user-name">USER NAME</button>
+    <input id="userInput"> <br>
+    <h1 id="message"></h1>
+
     <button class="info" onclick="" id="game-info">GAME INFO</button>
 </body>
 
