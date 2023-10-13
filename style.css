@@ -22,27 +22,40 @@ button{
 #AlphabetKeyboard{
 
 }
+
+.square{
+    background-color: black;
+    height: 350px;
+    width: 900px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #main-menu{
     background-color: black;
-    text-align: center;
+    display: block;
     color: whitesmoke;
 }
 
 #fashion-game{
     background-color: black;
-    text-align: center;
+    display: flex;
+    margin-left: 10%;
     color: whitesmoke;
 }
 
 #music-game{
     background-color: black;
-    text-align: center;
+    display: flex;
+    margin-left: 10%;
     color: whitesmoke;
 }
 
 #movie-game{
     background-color: black;
-    text-align: center;
+    display: flex;
+    margin-left: 10%;
     color: whitesmoke;
 
 }
@@ -61,10 +74,14 @@ button{
 
 }
 
-.square{
-    background-color: black;
-    height: 250px;
-    width: 250px;
-    justify-content: center;
-    align-items: flex-end;
+
+#answer-button{
+    background-color: burlywood;
+    color: black;
+}
+
+#play-again{
+    background-color:moccasin;
+    display: block;
+    color: black;
 }
