@@ -19,11 +19,11 @@ const categories = {
     Celebs: ['Justin Bieber', 'Michael Jackson', 'Nicki Minaj', 'Drake', 'Elon Musk', 'Eminem']
 
 }
-let userCategory = document.getElementById('categories').value
-let userWord = document.getElementById(userCategory)
+let userCategory = document.getElementById('button').value
+let userWord = getRandomWord(userCategory)
 
 // FUNCTION TO SHOW THE LINES FOR THE LETTER SELECTED 
-let  answerDisplay = '_'.repeat(userWord.length)
+let answerDisplay = '_'.repeat(userWord.length)
 document.getElementById(letter-display).innerText = answerDisplay
 
 // FUNCTION FOR THE USER TO GET A RANDOM WORD 
@@ -42,6 +42,20 @@ function guessABC(){
         return
     }
 }
+
+// LETTER GUESSED
+let newAnswerDisplay =''
+for(let i=0; i < userWord.length; i++){
+    if(userWord[i] === guess){
+        newAnswerDisplay += guess;
+    } else {
+        answerDisplay += answerDisplay
+    }
+}
+
+// DISPLAY WORD
+answerDisplay = newAnswerDisplay
+document.getElementById('word-display').innerText = answerDisplay
 
 // FUNCTION TO INPUT USER NAME
 function submitFunction(){
