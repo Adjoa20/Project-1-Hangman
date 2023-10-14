@@ -11,7 +11,7 @@
 
 
 // ANSWERS FOR THE CATEGORIES - MADE AN ARRAY WITHIN A METHOD, WHEN USER CLICKS ON THE CATEGORY - THOSE WILL THE WORDS ASSOICATED 
-let answers = {
+const categories = {
     Fashion: ['Coco Chanel', 'Namoi Campbell', 'Ralph Lauren', 'Bandana', 'Calvin Klien', 'Levi Strauss'],
     Music: ['New Orleans', 'Swing', 'Jay-Z', 'Beyonce', 'Kendrick Lamar', 'Beastie Boys', 'Redman' ],
     Movies: ['American Psycho', 'Paranormal Activiy', 'Midsommar', 'Dawn Of The Dead', 'Psycho', 'Alien'],
@@ -19,22 +19,29 @@ let answers = {
     Celebs: ['Justin Bieber', 'Michael Jackson', 'Nicki Minaj', 'Drake', 'Elon Musk', 'Eminem']
 
 }
+let userCategory = document.getElementById('categories').value
+let userWord = document.getElementById(userCategory)
 
-// DEFINING THE CORRECT OR INCORRECT LETTERS SELECTED 
-const rightLetters = []
-const wrongLettersChoses = []
+// FUNCTION TO SHOW THE LINES FOR THE LETTER SELECTED 
+let  answerDisplay = '_'.repeat(userWord.length)
+document.getElementById(letter-display).innerText = answerDisplay
 
-// DEFINED THE VARIBALES NEEDED FOR THE GAME
-const alphabetKey = document.getElementById('alphabet-key')
-const userSelection = document.getElementById('user-selection')
-const playAgain = document.getElementById('play-again')
-const resultText = document.getElementById('result-text')
+// FUNCTION FOR THE USER TO GET A RANDOM WORD 
+function getRandomWord(category){
+    const answer = categories(category);
+    return answer[Math.floor(Math.random() * answer.length)]
+}
 
-// USERS LIFE COUNT / WIN COUNT 
-let correctAnswer = 0
-let userCount = 0
+// LETTER GUESSES 
+function guessABC(){
+    const userInput = document.getElementById('userInput')
+    const guess = userInput.value.toUpperCase()
 
-let selectedLetter = ''
+    if(!guess.match(/^[a-z]$/) || answerDisplay.includes(guess)){
+        document.getElementById('message'.innerText = 'Try Again');
+        return
+    }
+}
 
 // FUNCTION TO INPUT USER NAME
 function submitFunction(){
