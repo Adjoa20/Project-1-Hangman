@@ -18,62 +18,38 @@ button{
     margin-right: auto;
 }
 
-
-#AlphabetKeyboard{
-
-}
-
-.square{
-    background-color: black;
-    height: 350px;
-    width: 900px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #main-menu{
     background-color: black;
-    display: block;
     color: whitesmoke;
 }
 
 #fashion-game{
     background-color: black;
-    display: flex;
-    margin-left: 10%;
     color: whitesmoke;
 }
 
 #music-game{
     background-color: black;
-    display: flex;
-    margin-left: 10%;
     color: whitesmoke;
 }
 
 #movie-game{
     background-color: black;
-    display: flex;
-    margin-left: 10%;
     color: whitesmoke;
 
 }
 
 #tv-game{
     background-color: black;
-    text-align: center;
     color: whitesmoke;
 
 }
 
 #celebrities-game{
     background-color: black;
-    text-align: center;
     color: whitesmoke;
 
 }
-
 
 #answer-button{
     background-color: burlywood;
@@ -82,6 +58,5 @@ button{
 
 #play-again{
     background-color:moccasin;
-    display: block;
     color: black;
 }

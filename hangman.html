@@ -4,49 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="landing.css">
     <title>Let's Play Hangman</title>
   </head>
   <body>
-    <button class="menu" onclick="" id="main-menu">Main Menu</button>
-    <button class="fashion" onclick="" id="fashion-game"> Fashion </button>
-    <button class="music" onclick="" id="music-game">Music</button>
-    <button class="movies" onclick="" id="movie-game">Movies</button>
-    <button class="tv" onclick="" id="tv-game">TV Shows</button>
-    <button class="celebrities" onclick="" id="celebrities-game">Celebrities</button>
-    <button class="answer" onclick="" id="answer-button">Hint</button>
+    <!-- BUTTONS FOR THE CATEGORY FOR THE USER TO SELECT FROM -->
+    <button class="menu" onclick="location.href='http://127.0.0.1:5500/Project-1-Hangman/'" id="main-menu">Main Menu</button>
+    <button class="fashion" id="fashion-game"> Fashion </button>
+    <button class="music" id="music-game">Music</button>
+    <button class="movies" id="movie-game">Movies</button>
+    <button class="tv" id="tv-game">TV Shows</button>
+    <button class="celebrities" id="celebrities-game">Celebrities</button>
+    <button class="answer" id="answer-button">Hint</button>
+    <button class="reset" id="play-again">Play Again</button>
 
-    <div id="Alphabet Keyboard" class ="Alphabet Keyboard hide">
-        <button>A</button>
-        <button>B</button>
-        <button>C</button>
-        <button>D</button>
-        <button>E</button>
-        <button>F</button>
-        <button>G</button>
-        <button>H</button>
-        <button>I</button>
-        <button>J</button>
-        <button>K</button>
-        <button>L</button>
-        <button>M</button>
-        <button>N</button>
-        <button>O</button>
-        <button>P</button>
-        <button>Q</button>
-        <button>R</button>
-        <button>S</button>
-        <button>T</button>
-        <button>U</button>
-        <button>V</button>
-        <button>W</button>
-        <button>X</button>
-        <button>Y</button>
-        <button>Z</button>
-    </div>
-
+    <!-- CONTAINER  TO DISPPLAY THE GAME IN -->
     <div class = "square"></div>
+
+    <!-- CONTAINER FOR WHEN THE USER SELECTS THE INCORRECT LETTER -->
+    <div class="incorrect-answer-container"> 
+      <div id="incorrect-letter"></div>
+    <div class="anwser" id="answer"></div>
+
+    <div id="container">
+      <div id="alphabet-key" class="alphabet-key-hide"></div>
+      <div id="user-selection"></div>
+      <div id="play-again" class="play-again-popup"></div>
+      <div id="result-text"></div>
+    </div>
     
-    <button class="reset" onclick="reset()" id="play-again">Play Again</button>
   </body>
 </html>

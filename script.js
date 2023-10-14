@@ -10,7 +10,7 @@
 // Celebs = 'Justin Bieber', 'Michael Jackson', 'Nicki Minaj', 'Drake', 'Elon Musk', 'Eminem'
 
 
-// ANSWERS FOR THE BUTTONS - MADE AN ARRAY WITHIN A METHOD, WHEN USER LIKES ON THE CATEGORY - THOSE WILL THE WORDS ASSOICATED 
+// ANSWERS FOR THE CATEGORIES - MADE AN ARRAY WITHIN A METHOD, WHEN USER CLICKS ON THE CATEGORY - THOSE WILL THE WORDS ASSOICATED 
 let answers = {
     Fashion: ['Coco Chanel', 'Namoi Campbell', 'Ralph Lauren', 'Bandana', 'Calvin Klien', 'Levi Strauss'],
     Music: ['New Orleans', 'Swing', 'Jay-Z', 'Beyonce', 'Kendrick Lamar', 'Beastie Boys', 'Redman' ],
@@ -20,25 +20,28 @@ let answers = {
 
 }
 
-// THE AMOUNT OF THE USERS HAVE
-let userLife = 10
+// DEFINING THE CORRECT OR INCORRECT LETTERS SELECTED 
+const rightLetters = []
+const wrongLettersChoses = []
 
-// THIS FUNCTION WILL USE TO CALL A PAGE WHEN LOADED AFTER THE USER PRESSED ON THE PLAY AGAIN BUTTON
-const newGame = () => {
-    winCount = 0
-    count = 0
-}
+// DEFINED THE VARIBALES NEEDED FOR THE GAME
+const alphabetKey = document.getElementById('alphabet-key')
+const userSelection = document.getElementById('user-selection')
+const playAgain = document.getElementById('play-again')
+const resultText = document.getElementById('result-text')
 
-// FUNCTION TO START A NEW GAME 
-resetButton.addEventListener('click', newGame)
-console.log(newGame)
+// USERS LIFE COUNT / WIN COUNT 
+let correctAnswer = 0
+let userCount = 0
+
+let selectedLetter = ''
 
 // FUNCTION TO INPUT USER NAME
 function submitFunction(){
-   let userInput = document.querySelector("#userInput")
-   let message = document.querySelector("#message")
+   let userInput = document.querySelector('#userInput')
+   let message = document.querySelector('#message')
 
-    message.innerHTML = "Welcome To Hangman " + userInput.value
+    message.innerHTML = 'Welcome To Hangman ' + userInput.value
 }
 
 
