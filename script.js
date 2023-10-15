@@ -17,45 +17,10 @@ const categories = {
     Movies: ['American Psycho', 'Paranormal Activiy', 'Midsommar', 'Dawn Of The Dead', 'Psycho', 'Alien'],
     TVShows: ['Twin Peaks', 'Bobs Burgers', 'Shamless', 'Futurama', 'Parks & Recreation', '30 Rock'],
     Celebs: ['Justin Bieber', 'Michael Jackson', 'Nicki Minaj', 'Drake', 'Elon Musk', 'Eminem']
-
-}
-let userCategory = document.getElementById('button').value
-let userWord = getRandomWord(userCategory)
-
-// FUNCTION TO SHOW THE LINES FOR THE LETTER SELECTED 
-let answerDisplay = '_'.repeat(userWord.length)
-document.getElementById(letter-display).innerText = answerDisplay
-
-// FUNCTION FOR THE USER TO GET A RANDOM WORD 
-function getRandomWord(category){
-    const answer = categories(category);
-    return answer[Math.floor(Math.random() * answer.length)]
 }
 
-// LETTER GUESSES 
-function guessABC(){
-    const userInput = document.getElementById('userInput')
-    const guess = userInput.value.toUpperCase()
 
-    if(!guess.match(/^[a-z]$/) || answerDisplay.includes(guess)){
-        document.getElementById('message'.innerText = 'Try Again');
-        return
-    }
-}
 
-// LETTER GUESSED
-let newAnswerDisplay =''
-for(let i=0; i < userWord.length; i++){
-    if(userWord[i] === guess){
-        newAnswerDisplay += guess;
-    } else {
-        answerDisplay += answerDisplay
-    }
-}
-
-// DISPLAY WORD
-answerDisplay = newAnswerDisplay
-document.getElementById('word-display').innerText = answerDisplay
 
 // FUNCTION TO INPUT USER NAME
 function submitFunction(){

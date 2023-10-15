@@ -13,16 +13,19 @@
 
     <!-- USER OPTIONS TO SELECT A CATERGORY -->
     <br>
-    <label for="button">SELECT THE GAME YOU WOULD LIKE TO PLAY</label>
-    <button vaule="fashion" id="fashion-game"> Fashion </button>
-    <button vaule="music" id="music-game">Music</button>
-    <button vaule="movies" id="movie-game">Movies</button>
-    <button vaule="tv" id="tv-game">TV Shows</button>
-    <button vaule="celebrities" id="celebrities-game">Celebrities</button>
-    
+    <label for="category">SELECT THE GAME YOU WOULD LIKE TO PLAY</label>
+    <select id="category">
+      <option vaule="fashion"> Fashion </option>
+      <option vaule="music"> Music </option>
+      <option vaule="movies"> Movie</option>
+      <option vaule="tv"> TvShows </option>
+      <option vaule="celebrities"> Celebrities </option>
+  </select>
     <!-- GUESS THE WORD -->
     <div id="letter-display"></div>
     <input type="text" id="guess-answer" placeholder="Enter a letter">
+    <button onclick="guessABC()">Guess</button>
+    <div id="message"></div>
     <br>
 
     <button class="answer" id="answer-button">Hint</button>
