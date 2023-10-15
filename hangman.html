@@ -12,36 +12,57 @@
     <button class="menu" onclick="location.href='http://127.0.0.1:5500/Project-1-Hangman/'" id="main-menu">Main Menu</button>
 
     <!-- USER OPTIONS TO SELECT A CATERGORY -->
-    <br>
     <label for="category">SELECT THE GAME YOU WOULD LIKE TO PLAY</label>
-    <select id="category">
-      <option vaule="fashion"> Fashion </option>
-      <option vaule="music"> Music </option>
-      <option vaule="movies"> Movie</option>
-      <option vaule="tv"> TvShows </option>
-      <option vaule="celebrities"> Celebrities </option>
-  </select>
-    <!-- GUESS THE WORD -->
-    <div id="letter-display"></div>
-    <input type="text" id="guess-answer" placeholder="Enter a letter">
-    <button onclick="guessABC()">Guess</button>
-    <div id="message"></div>
+    <div id="category">
     <br>
-
-    <button class="answer" id="answer-button">Hint</button>
-    <button class="reset" id="game-over">Play Again</button>
-    
+      <button class="fashion" id="fashion-button">Fashion</button>
+      <button class="music" id="music-button">Music</button>
+      <button class="movies" id="movies-button">Movies</button>
+      <button class="tv" id="tv-button">TV</button>
+      <button class="celebrities" id="celebrities-button">Celebrities</button>
+    <br>
+  </div>
 
     <!-- USER WILL BE ABLE TO SELECT THE LETTER -->
-    <div id="keyboard">
-      <div id="alphabet-key" class="alphabet-key-hide"></div>
+    <div class="keyboard">
+      <div id="alphabet-key" class="alphabet-key-hide">
+        <button>A</button>
+        <button>B</button>
+        <button>C</button>
+        <button>D</button>
+        <button>E</button>
+        <button>F</button>
+        <button>G</button>
+        <button>H</button>
+        <button>I</button>
+        <button>J</button>
+        <button>K</button>
+        <button>L</button>
+        <button>M</button>
+        <button>N</button>
+        <button>O</button>
+        <button>P</button>
+        <button>Q</button>
+        <button>R</button>
+        <button>S</button>
+        <button>T</button>
+        <button>U</button>
+        <button>V</button>
+        <button>W</button>
+        <button>X</button>
+        <button>Y</button>
+        <button>Z</button>
+      </div>
       <div id="user-selection"></div>
     </div>
 
-    <div id="new-game">
+    <br>
+    <button class="answer" id="answer-button">Hint</button>
+    <button class="reset" id="game-over">Play Again</button>
+
+    <!-- NEW GAME POP UP -->
       <div id="play-again" class="play-again-popup"></div>
       <div id="result-text"></div>
-    </div>
     
   </body>
 </html>

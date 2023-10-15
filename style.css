@@ -23,29 +23,29 @@ button{
     color: whitesmoke;
 }
 
-#fashion-game{
+#fashion-button{
     background-color: black;
     color: whitesmoke;
 }
 
-#music-game{
+#music-button{
     background-color: black;
     color: whitesmoke;
 }
 
-#movie-game{
-    background-color: black;
-    color: whitesmoke;
-
-}
-
-#tv-game{
+#movies-button{
     background-color: black;
     color: whitesmoke;
 
 }
 
-#celebrities-game{
+#tv-button{
+    background-color: black;
+    color: whitesmoke;
+
+}
+
+#celebrities-button{
     background-color: black;
     color: whitesmoke;
 

@@ -19,8 +19,19 @@ const categories = {
     Celebs: ['Justin Bieber', 'Michael Jackson', 'Nicki Minaj', 'Drake', 'Elon Musk', 'Eminem']
 }
 
+// DEFINE THE VARIABLES 
+const alphabetKey = document.getElementById('alphabet-key')
+const categoriesSelction = document.getElementById('category')
+const userSelection = document.getElementById('user-selection')
+const playGame = document.getElementById('play-again')
+const gameOverButton = document.getElementById('game-over')
+const resultText = document.getElementById('result-text')
 
+// NEED TO COUNT THE NUMBER OF WINS
+let correctAnswer = 0
+let correct = 0
 
+let selectChoice = ''
 
 // FUNCTION TO INPUT USER NAME
 function submitFunction(){
@@ -30,4 +41,13 @@ function submitFunction(){
     message.innerHTML = 'Welcome To Hangman ' + userInput.value
 }
 
+
+// FUNCTION WHEN USER SELECTS TO PLAY AGAIN 
+const newGame = () => {
+    correctAnswer = 0;
+    correct = 0
+}
+
+gameOverButton.addEventListener('click', newGame)
+window.onload = newGame
 
