@@ -13,56 +13,63 @@
 
     <!-- USER OPTIONS TO SELECT A CATERGORY -->
     <label for="category">SELECT THE GAME YOU WOULD LIKE TO PLAY</label>
-    <div id="category">
+    <div class="game-container">
+    <div id="category"></div>
     <br>
-      <button class="fashion" onclick="select()" id="fashion-button">Fashion</button>
-      <button class="music" onclick="select1()" id="music-button">Music</button>
-      <button class="movies" onclick="select2()" id="movies-button">Movies</button>
+      <button class="fashion" onclick="select()" id="fashion-button">FASHION</button>
+      <button class="music" onclick="select1()" id="music-button">MUSIC</button>
+      <button class="movies" onclick="select2()" id="movies-button">MOVIES</button>
       <button class="tv" onclick="select3()" id="tv-button">TV</button>
-      <button class="celebrities" onclick="select4()" id="celebrities-button">Celebrities</button>
+      <button class="celebrities" onclick="select4()" id="celebrities-button">CELEBRITIES</button>
     <br>
-  </div>
+  
 
     <!-- USER WILL BE ABLE TO SELECT THE LETTER -->
-    <div class="keyboard">
-      <div id="alphabet-key" class="alphabet-key-hide">
-        <button>A</button>
-        <button>B</button>
-        <button>C</button>
-        <button>D</button>
-        <button>E</button>
-        <button>F</button>
-        <button>G</button>
-        <button>H</button>
-        <button>I</button>
-        <button>J</button>
-        <button>K</button>
-        <button>L</button>
-        <button>M</button>
-        <button>N</button>
-        <button>O</button>
-        <button>P</button>
-        <button>Q</button>
-        <button>R</button>
-        <button>S</button>
-        <button>T</button>
-        <button>U</button>
-        <button>V</button>
-        <button>W</button>
-        <button>X</button>
-        <button>Y</button>
-        <button>Z</button>
-      </div>
-      <div id="user-selection"></div>
-    </div>
+      <div id="alphabet-key" class="alphabet-key-hide"></div>
+        <button class="bttn">A</button>
+        <button class="bttn">B</button>
+        <button class="bttn">C</button>
+        <button class="bttn">D</button>
+        <button class="bttn">E</button>
+        <button class="bttn">F</button>
+        <button class="bttn">G</button>
+        <button class="bttn">H</button>
+        <button class="bttn">I</button>
+        <button class="bttn">J</button>
+        <button class="bttn">K</button>
+        <button class="bttn">L</button>
+        <button class="bttn">M</button>
+        <button class="bttn">N</button>
+        <button class="bttn">O</button>
+        <button class="bttn">P</button>
+        <button class="bttn">Q</button>
+        <button class="bttn">R</button>
+        <button class="bttn">S</button>
+        <button class="bttn">T</button>
+        <button class="bttn">U</button>
+        <button class="bttn">V</button>
+        <button class="bttn">W</button>
+        <button class="bttn">X</button>
+        <button class="bttn">Y</button>
+        <button class="bttn">Z</button>
+    <div id="user-selection"></div>
+    
 
     <br>
-    <button class="answer" id="answer-button">Hint</button>
-    <button class="reset" id="game-over">Play Again</button>
+    <p id="clue">CLUE:</p>
+    <button class="answer" id="answer-button">HINT</button>
+    <button class="reset" id="game-over">PLAY AGAIN</button>
 
     <!-- NEW GAME POP UP -->
       <div id="play-again" class="play-again-popup"></div>
       <div id="result-text"></div>
+
+    </div>
+    <!-- USER LIVES -->
+    <p id="yourlives">YOUR LIVES
+      <b>0 / 10</b>
+    </p>
+    
     
   </body>
 </html>

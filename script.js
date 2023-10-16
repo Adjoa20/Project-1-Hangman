@@ -19,6 +19,10 @@ const categories = {
     Celebs: ['Justin Bieber', 'Michael Jackson', 'Nicki Minaj', 'Drake', 'Elon Musk', 'Eminem']
 }
 
+const hints = {
+    
+}
+
 // DEFINE THE VARIABLES 
 const alphabetKey = document.getElementById('alphabet-key')
 const categoriesSelction = document.getElementById('category')
@@ -28,10 +32,20 @@ const gameOverButton = document.getElementById('game-over')
 const resultText = document.getElementById('result-text')
 
 // NEED TO COUNT THE NUMBER OF WINS
+let selectChoice = ''
 let correctAnswer = 0
 let correct = 0
+let incorrectAnswer = 10
+let input = []
 
-let selectChoice = ''
+// FUNCTION FOR THE ALHPABET TO WORK 
+let buttons = document.querySelectorAll('.bttn')
+for (let i=0; i < buttons.length; i++){
+    buttons[i].addEventListener('click', function(){
+        console.log(this.innerText + 'clicked')
+    })
+}
+
 
 // FUNCTION TO INPUT USER NAME
 function submitFunction(){
