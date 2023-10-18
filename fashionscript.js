@@ -5,13 +5,22 @@ let userLives= 10
 let input = []
 let checkWin = []
 
-// FUNCTION FOR THE ALPHABET TO WORK 
+// FUNCTION FOR THE ALPHABET TO WORK / ADDED IN LISTENERS
 const alphabetKey = document.querySelector('.alphabet-key')
+const displayLetter = document.getElementById('display-letter')
 
 for (let i = 65; i <= 90; i++){
     const button = document.createElement('button')
     button.innerText = String.fromCharCode(i)
     alphabetKey.appendChild(button)
+
+    button.addEventListener('click', (event) => {
+        const clickedButton = event.target
+        const clickedLetter = clickedButton.innerText
+        console.log('Clicked')
+
+        displayLetter.innerText = '' +  clickedLetter
+    })
 }
 
 const fashionList = [
