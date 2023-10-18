@@ -1,3 +1,10 @@
+// NEED TO COUNT THE NUMBER OF WINS
+let correctAnswer = ''
+let selectHint= ''
+let userLives= 10
+let input = []
+let checkWin = []
+
 // FUNCTION FOR THE ALPHABET TO WORK 
 const alphabetKey = document.querySelector('.alphabet-key')
 
@@ -21,7 +28,7 @@ const fashionList = [
       hint: 'What item of clothing was Axel Rose from Guns N Roses known for donning?',
     },
     { answer: 'Calvin Klien',
-      hint: 'The world/s biggest selling brand of men/s underwear is?',
+      hint: 'The worlds biggest selling brand of men/s underwear is?',
     },
     { answer: 'Levi Strauss',
       hint: 'Who invented jeans?',
@@ -29,11 +36,20 @@ const fashionList = [
 ]
 
 // FASHION ANSWERS AND HINTS 
-const fashionAns = () => {
-    const { answer, hint} = fashionList[Math.floor(Math.random() * fashionList.length)]
-    console.log(answer, hint)
+const getRandomFashionAns = () => {
+    return fashionList[Math.floor(Math.random() * fashionList.length)]
 }
+getRandomFashionAns()
 
-fashionAns()
+// SHOWING THE HINTS 
+const hintButton = document.getElementById('hint')
+const hintContainer = document.getElementById('hintContainer')
+
+hintButton.addEventListener('click', () => {
+    const {hint} = getRandomFashionAns()
+    hintContainer.innerText = ' ' + `${hint}`
+})
+
+// START THE GAME 
 
 
