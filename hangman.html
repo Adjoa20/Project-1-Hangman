@@ -14,50 +14,39 @@
     <!-- USER OPTIONS TO SELECT A CATERGORY -->
     <label for="category">SELECT THE GAME YOU WOULD LIKE TO PLAY</label>
     <div class="game-container">
-    <div id="category"></div>
+    <div id="category"> </div>
     <br>
-      <button class="fashion" onclick="select()" id="fashion-button">FASHION</button>
+      <a href="/Project-1-Hangman/fashion.html">
+      <button class="fashion" id="fashion-button">FASHION</button>
+      </a>
+
+      <a>
       <button class="music" onclick="select1()" id="music-button">MUSIC</button>
+      </a>
+
+      <a>
       <button class="movies" onclick="select2()" id="movies-button">MOVIES</button>
+     </a>
+
+      <a>
       <button class="tv" onclick="select3()" id="tv-button">TV</button>
+      </a>
+
+      <a>
       <button class="celebrities" onclick="select4()" id="celebrities-button">CELEBRITIES</button>
+      </a>
     <br>
+   
   
 
     <!-- USER WILL BE ABLE TO SELECT THE LETTER -->
-      <div id="alphabet-key" class="alphabet-key-hide"></div>
-        <button class="bttn">A</button>
-        <button class="bttn">B</button>
-        <button class="bttn">C</button>
-        <button class="bttn">D</button>
-        <button class="bttn">E</button>
-        <button class="bttn">F</button>
-        <button class="bttn">G</button>
-        <button class="bttn">H</button>
-        <button class="bttn">I</button>
-        <button class="bttn">J</button>
-        <button class="bttn">K</button>
-        <button class="bttn">L</button>
-        <button class="bttn">M</button>
-        <button class="bttn">N</button>
-        <button class="bttn">O</button>
-        <button class="bttn">P</button>
-        <button class="bttn">Q</button>
-        <button class="bttn">R</button>
-        <button class="bttn">S</button>
-        <button class="bttn">T</button>
-        <button class="bttn">U</button>
-        <button class="bttn">V</button>
-        <button class="bttn">W</button>
-        <button class="bttn">X</button>
-        <button class="bttn">Y</button>
-        <button class="bttn">Z</button>
-    <div id="user-selection"></div>
+    <div class="alphabet-key"></div>
+    <p id="topicName"></p>
     
-
     <br>
     <p id="clue">CLUE:</p>
-    <button class="answer" id="answer-button">HINT</button>
+    <div id="hold"></div>
+    <button class="hint" id="hint">HINT</button>
     <button class="reset" id="game-over">PLAY AGAIN</button>
 
     <!-- NEW GAME POP UP -->

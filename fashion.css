@@ -1,0 +1,13 @@
+body{
+    background-image: url(https://pyxis.nymag.com/v1/imgs/e17/a66/2ae7481cf67b04dbcc794a6cdfb0af78bb-vogue-italia-cover.rvertical.w600.jpg);
+}
+
+button{
+    display: auto;
+    font-size: 40p;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -18,13 +18,12 @@ button{
     margin-right: auto;
 }
 
-
 #main-menu{
     background-color: black;
     color: whitesmoke;
 }
 
-#fashion-button{
+ #fashion-button{ 
     background-color: black;
     color: whitesmoke;
 }
@@ -60,4 +59,4 @@ button{
 #play-again{
     background-color:moccasin;
     color: black;
-}
+} 
