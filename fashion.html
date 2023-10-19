@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="fashionscript.js" defer></script>
     <script src="catandhints.js" defer></script>
-    <link rel="stylesheet" href="fashion.css"/>
+    <link rel="stylesheet" href="fashion.css" />
     <title>Hangman: Fashion Game</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- BUTTON USER TO RETURN BACK TO THE MAIN MENU -->
     <button class="menu" onclick="location.href='http://127.0.0.1:5500/Project-1-Hangman/'" id="main-menu">MAIN MENU</button>
 
-     <!-- USER WILL BE ABLE TO SELECT THE LETTER -->
-    <div class="alphabet-key"></div>
+    <!-- USER WILL BE ABLE TO SELECT THE LETTER -->
+    <div class="answerContianer"></div>
+
     <div id="display-letter"></div>
+    <div id="underscoresContainer"></div>
+    <div id="alphabetkey" class="alphabet-key"></div>
+    <div id="userLives"></div>
+    <div id="winCount"> Wins: 0</div>
 
-    <p id="clue">CLUE:</p>
-
-      <!-- USER LIVES -->
-      <p id="yourlives">YOUR LIVES
-        <b>0 / 10</b>
-      </p>
     
-    <div id="hintContainer"> </div>
-        <button class="hint" id="hint">HINT</button>
 
+    <!-- USER LIVES -->
+    <p id="yourlives">
+      YOUR LIVES
+      <b>0 / 10</b>
+    </p>
 
+    <div id="hintContainer"></div>
+    <p id="clue">CLUE:</p>  
+    <button class="hint" id="hint">HINT</button>
+     
+     
     <!-- OPTION FOR USER TO RETURN BACK TO PICK ANOTHER CATEGORY TO PLAY -->
-    <button class="return" onclick="location.href='http://127.0.0.1:5500/Project-1-Hangman/hangman.html'" id="return-back">GO BACK</button>
+    <button
+      class="return"
+      onclick="location.href='http://127.0.0.1:5500/Project-1-Hangman/hangman.html'"
+      id="return-back">GO BACK  </button>
 
     <!-- NEW GAME POP UP -->
     <div id="play-again" class="play-again-popup"></div>
-</body>
+  </body>
 </html>

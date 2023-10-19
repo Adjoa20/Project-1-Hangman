@@ -11,3 +11,18 @@ button{
     margin-left: auto;
     margin-right: auto;
 }
+
+#display-letter{
+    display: flex; 
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#display-letter #letter{
+    width: 28px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid black;
+}
+
