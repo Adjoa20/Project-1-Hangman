@@ -93,3 +93,14 @@ function handleGuess(clickedLetter){
         resetGame()
     }
 }
+
+// RESET THE GAME 
+function  resetGame(){
+    correctAnswer = ''
+    input = []
+    userLives = 10
+    userLivesDisplay.innerText =' ' + userLives
+    displayLetter.innerText = ''
+    getRandomWord()
+    displayUnderscores()
+}
