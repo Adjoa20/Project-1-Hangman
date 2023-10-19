@@ -48,3 +48,48 @@ for (let i = 65; i <= 90; i++){
         handleGuess(clickedLetter)
     })
 }
+
+// FUNCTION FOR A RANDOM ANS 
+function getRandomFashionAns(){
+    return fashionList[Math.floor(Math.random() * fashionList.length)]
+}
+
+// FUNCTION TO DISPLAY UNDERSCORES WITH ANSWERS 
+function displayUnderscores(){
+    const word = correctAnswer.toLowerCase()
+    let displayText = ''
+    for (const letter of word){
+        if (input.includes(letter)){
+            displayText += letter
+        } else if (letter === ' ') {
+            displayText += ' '
+        } else {
+            displayText += '_'
+        }
+    }
+    underscoresContainer.innerText = displayText
+}
+
+function handleGuess(clickedLetter){
+    input.push(clickedLetter)
+    displayLetter.innerText = ' ' + clickedLetter
+
+    is (!correctAnswer.toLowerCase().includes(clickedLetter)){
+        userLives --;
+        userLivesDisplay.innerText = ' ' + userLives;
+        if (userLives === 0){
+            alert ('Over');
+            resetGame()
+            return
+        }
+    }
+
+    displayUnderscores()
+
+    if (!underscoresContainer.innerText.includes('_')){
+        alert('Win')
+        winCount++;
+        winCountDisplay.innerText = 'Wins: ' + winCount
+        resetGame()
+    }
+}
