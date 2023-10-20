@@ -74,3 +74,42 @@ for (let i = 65; i <= 90; i++) {
 function getRandomMusicAns() {
     return musicList[Math.floor(Math.random() * musicList.length)];
   }
+
+  // FUNCTION TO DISPLAY UNDERSCORES WITH ANSWERS
+function displayUnderscores() {
+    const word = correctAnswer.toLowerCase();
+    let displayText = "";
+    for (const letter of word) {
+      if (letter === " ") {
+        displayText = " ";
+      } else {
+        displayText = "_";
+      }
+      let letterDiv = document.createElement("div");
+      letterDiv.innerText = displayText;
+      underscoresContainer.appendChild(letterDiv);
+    }
+  }
+  
+  function handleGuess(isFoundLetter) {
+    if (!isFoundLetter) {
+      userLives--;
+      livesSpan.innerText = userLives;
+      if (userLives === 0) {
+        alert("Over");
+        resetGame();
+        return;
+      }
+    }
+  
+    for (let i = 0; i < underscoresContainer.children.length; i++) {
+      if (underscoresContainer.children[i].textContent === "_") {
+        return;
+      }
+    }
+    alert("Win");
+    winCount++;
+    winCountDisplay.innerText = "Wins: " + winCount;
+    resetGame();
+    console.log(underscoresContainer);
+  }
