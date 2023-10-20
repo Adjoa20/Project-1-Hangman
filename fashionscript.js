@@ -1,4 +1,4 @@
-// ANSWER AND HINT FOR THE GAME
+// ANSWERS AND HINT FOR THE GAME
 const fashionList = [
   {
     answer: "CocoChanel",
@@ -39,6 +39,7 @@ const userLivesDisplay = document.getElementById("userLives");
 const winCountDisplay = document.getElementById("winCount");
 const livesSpan = document.getElementById("lives");
 const currentHint = "";
+const showClue = document.getElementById("clue")
 
 // CREATING ALPHABETS AND ADDING LISTENERS
 for (let i = 65; i <= 90; i++) {
@@ -47,8 +48,6 @@ for (let i = 65; i <= 90; i++) {
   alphabetKey.appendChild(button);
 
   button.addEventListener("click", (event) => {
-    // const clickedButton = event.target
-    // const clickedLetter = clickedButton.innerText
     console.log(event.target.innerText);
     const letterArray = underscoresContainer.children;
     let foundLetter = false;
@@ -96,8 +95,6 @@ function handleGuess(isFoundLetter) {
     }
   }
 
-  // displayUnderscores()
-
   for (let i = 0; i < underscoresContainer.children.length; i++) {
     if (underscoresContainer.children[i].textContent === "_") {
       return;
@@ -127,7 +124,7 @@ function getRandomWord() {
   correctAnswer = answer;
 
   hintButton.addEventListener("click", (event) => {
-    hintContainer.innerText = " " + `${hint}`;
+    showClue.innerText = "CLUE: " + `${hint}`;
   });
 }
 

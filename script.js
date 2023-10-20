@@ -1,16 +1,11 @@
 // alert("JS Linked")
 
-
-
 // DEFINE THE VARIABLES TO GET THE ELEMENTS 
 const gameContainer = document.getElementById('alphabet-key')
 const showAnswer = document.getElementById('hold')
 
 const userCategory = document.getElementById('categories')
 const resultText = document.getElementById('result-text')
-
-// FUNCTION TO SHOW HINT 
-
 
 // FUNCTION TO INPUT USER NAME
 function submitFunction(){
