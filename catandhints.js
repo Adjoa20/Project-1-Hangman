@@ -1,34 +1,5 @@
 
-const musicList = [ 
-    {
-        answer: 'New Orleans',
-        hint: 'Jazz originated in which city in the United States?',
-    },
-    {
-        answer: 'Swing',
-        hint: 'What is the term used to describe the rhythmic pattern in jazz that emphasizes the offbeats?',
-    },
-    {
-        answer: 'Jay-Z',
-        hint: 'The Black Album was released by which artist?',
-    },
-    {
-        answer: 'Beyonce',
-        hint: 'This R&B Diva was born in the city of Houston and apart of the 1990s girl group ',
-    },
-    {
-        answer: 'Kendrick Lamar',
-        hint: 'Which hip-hop artist is the first to have won a Pulitzer Prize?',
-    },
-    {
-        answer: 'Beastie Boys',
-        hint: 'Hello Nasty was an album by which hip-hop band formed in 1981?',
-    },
-    {
-        answer: 'Redman',
-        hint: 'Which of these was not an official part of Wu Tang Clan/s nine members?',
-    }
-]
+
 
 movieList = [
     {
