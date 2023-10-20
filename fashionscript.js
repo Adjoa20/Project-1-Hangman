@@ -1,21 +1,21 @@
 // ANSWER AND HINT FOR THE GAME 
 const fashionList = [
-    { answer: 'Coco Chanel',
+    { answer: 'CocoChanel',
       hint: 'Which designer created the little black dress?',
     },
-    { answer: 'Namoi Campbell',
+    { answer: 'NaomiCampbell',
       hint: 'She became the first black model to appear on the cover of French Vogue.',
     },
-    { answer: 'Ralph Lauren',
+    { answer: 'RalphLauren',
       hint: 'Which fashion designer has a brand called Rugby?',
     },
     { answer: 'Bandana',
       hint: 'What item of clothing was Axel Rose from Guns N Roses known for donning?',
     },
-    { answer: 'Calvin Klien',
+    { answer: 'CalvinKlien',
       hint: 'The worlds biggest selling brand of men/s underwear is?',
     },
-    { answer: 'Levi Strauss',
+    { answer: 'LeviStrauss',
       hint: 'Who invented jeans?',
     },
 ]
@@ -27,7 +27,7 @@ let userLives = 10
 let winCount = 0
 
 // DEFINING THE ELEMENTS 
-const alphabetKey = document.getElementById('alphabetKey')
+const alphabetKey = document.querySelector('.alphabet-key')
 const displayLetter = document.getElementById('display-letter')
 const hintButton = document.getElementById('hint')
 const hintContainer = document.getElementById('hintContainer')
@@ -35,6 +35,9 @@ const answerContainer = document.getElementById('answerContainer')
 const underscoresContainer = document.getElementById('underscoresContainer')
 const userLivesDisplay = document.getElementById('userLives')
 const winCountDisplay = document.getElementById('winCount')
+const livesSpan = document.getElementById('lives')
+
+
 
 // CREATING ALPHABETS AND ADDING LISTENERS
 for (let i = 65; i <= 90; i++){
@@ -43,9 +46,20 @@ for (let i = 65; i <= 90; i++){
     alphabetKey.appendChild(button)
 
     button.addEventListener('click', (event) => {
-        const clickedButton = event.target 
-        const clickedLetter = clickedButton.innerText
-        handleGuess(clickedLetter)
+        // const clickedButton = event.target
+        // const clickedLetter = clickedButton.innerText
+        console.log(event.target.innerText)
+        const letterArray = underscoresContainer.children
+        let foundLetter = false
+        for (let i = 0; i < correctAnswer.length; i++){
+            if( event.target.innerText === correctAnswer[i].toUpperCase()){
+                foundLetter = true
+                letterArray[i].innerText = correctAnswer[i].toUpperCase()
+                console.log(correctAnswer[i])
+                console.log(event.target.value)
+            }
+        }
+        handleGuess(foundLetter)
     })
 }
 
@@ -59,24 +73,21 @@ function displayUnderscores(){
     const word = correctAnswer.toLowerCase()
     let displayText = ''
     for (const letter of word){
-        if (input.includes(letter)){
-            displayText += letter
-        } else if (letter === ' ') {
-            displayText += ' '
+        if (letter === ' ') {
+            displayText = ' '
         } else {
-            displayText += '_'
+            displayText = '_'
         }
+      let letterDiv = document.createElement('div')
+      letterDiv.innerText = displayText
+      underscoresContainer.appendChild(letterDiv) 
     }
-    underscoresContainer.innerText = displayText
 }
 
-function handleGuess(clickedLetter){
-    input.push(clickedLetter)
-    displayLetter.innerText = ' ' + clickedLetter
-
-    is (!correctAnswer.toLowerCase().includes(clickedLetter)){
+function handleGuess(isFoundLetter){
+    if (!isFoundLetter){
         userLives --;
-        userLivesDisplay.innerText = ' ' + userLives;
+        livesSpan.innerText = userLives;
         if (userLives === 0){
             alert ('Over');
             resetGame()
@@ -84,23 +95,37 @@ function handleGuess(clickedLetter){
         }
     }
 
-    displayUnderscores()
+    // displayUnderscores()
 
-    if (!underscoresContainer.innerText.includes('_')){
-        alert('Win')
-        winCount++;
-        winCountDisplay.innerText = 'Wins: ' + winCount
-        resetGame()
+    for (let i = 0; i < underscoresContainer.children.length; i++){
+        if (underscoresContainer.children[i].textContent === '_'){
+            return 
+        }
     }
+    alert('Win')
+            winCount++;
+            winCountDisplay.innerText = 'Wins: ' + winCount
+            resetGame()
+    console.log(underscoresContainer)
 }
 
 // RESET THE GAME 
 function  resetGame(){
     correctAnswer = ''
-    input = []
     userLives = 10
-    userLivesDisplay.innerText =' ' + userLives
+    livesSpan.innerText = userLives
     displayLetter.innerText = ''
+    underscoresContainer.innerHTML = ''
     getRandomWord()
     displayUnderscores()
 }
+
+// GET ANSWER WITH HINT 
+function getRandomWord(){
+    const {answer, hint} = getRandomFashionAns()
+    correctAnswer = answer
+    hintContainer.innerText = ' ' + `${hint}`
+}
+
+getRandomWord()
+displayUnderscores()
