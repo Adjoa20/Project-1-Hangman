@@ -35,7 +35,7 @@ let correctAnswer = "";
 let userLives = 10;
 let winCount = 0;
 
-// DEFINING THE ELEMENTS
+// DEFINING THE ELEMENTS AND VARIABLES 
 const alphabetKey = document.querySelector(".alphabet-key");
 const displayLetter = document.getElementById("display-letter");
 const hintButton = document.getElementById("hint");
@@ -47,3 +47,30 @@ const winCountDisplay = document.getElementById("winCount");
 const livesSpan = document.getElementById("lives");
 const currentHint = "";
 const showClue = document.getElementById("clue")
+
+// CREATING ALPHABETS AND ADDING LISTENERS
+for (let i = 65; i <= 90; i++) {
+    const button = document.createElement("button");
+    button.innerText = String.fromCharCode(i);
+    alphabetKey.appendChild(button);
+  
+    button.addEventListener("click", (event) => {
+      console.log(event.target.innerText);
+      const letterArray = underscoresContainer.children;
+      let foundLetter = false;
+      for (let i = 0; i < correctAnswer.length; i++) {
+        if (event.target.innerText === correctAnswer[i].toUpperCase()) {
+          foundLetter = true;
+          letterArray[i].innerText = correctAnswer[i].toUpperCase();
+          console.log(correctAnswer[i]);
+          console.log(event.target.value);
+        }
+      }
+      handleGuess(foundLetter);
+    });
+  }
+
+  // FUNCTION FOR A RANDOM ANS
+function getRandomMusicAns() {
+    return musicList[Math.floor(Math.random() * musicList.length)];
+  }
