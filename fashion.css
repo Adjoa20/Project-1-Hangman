@@ -1,5 +1,11 @@
 body{
-    background-image: url(https://pyxis.nymag.com/v1/imgs/e17/a66/2ae7481cf67b04dbcc794a6cdfb0af78bb-vogue-italia-cover.rvertical.w600.jpg);
+    background-image: url(https://thechicdaily.files.wordpress.com/2021/03/19450501.jpg?w=315);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 button{
@@ -24,5 +30,49 @@ button{
     width: 28px;
     margin-bottom: 40px;
     border-bottom: 3px solid black;
+}
+
+.letterDiv{
+    width: 80%;
+    height: 7;
+    border: 0 none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 200px;
+    margin-bottom: 90px;
+}
+
+#underscoresContainer div{
+    display: inline-block;
+    margin: 0 5px;
+
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
 

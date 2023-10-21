@@ -89,7 +89,7 @@ function handleGuess(isFoundLetter) {
     userLives--;
     livesSpan.innerText = userLives;
     if (userLives === 0) {
-      alert("Over");
+      openPlayAgainModal();
       resetGame();
       return;
     }
@@ -126,6 +126,17 @@ function getRandomWord() {
   hintButton.addEventListener("click", (event) => {
     showClue.innerText = "CLUE: " + `${hint}`;
   });
+}
+
+// GAME OVER POP UP FUNCTION 
+function openPlayAgainModal(){
+  const modal = document.getElementById("playAgainModal")
+  modal.style.display = "block"
+}
+
+function closePlayAgainModal(){
+  const modal = document.getElementById("playAgainModal")
+  modal.style.display = "none"
 }
 
 

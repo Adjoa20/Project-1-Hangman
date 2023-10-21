@@ -18,3 +18,48 @@ button{
     margin-right: auto;
 }
 
+h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+h2{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+
+}
+
+h3{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.user{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: whitesmoke;
+}
+
+#userInput{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#message{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

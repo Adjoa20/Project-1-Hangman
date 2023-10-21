@@ -44,6 +44,7 @@ const livesSpan = document.getElementById("lives");
 const currentHint = "";
 const showClue = document.getElementById("clue")
 
+
 // CREATING ALPHABETS AND ADDING LISTENERS
 for (let i = 65; i <= 90; i++) {
     const button = document.createElement("button");
@@ -92,7 +93,7 @@ function displayUnderscores() {
       userLives--;
       livesSpan.innerText = userLives;
       if (userLives === 0) {
-        alert("Over");
+        openPlayAgainModal();
         resetGame();
         return;
       }
@@ -103,20 +104,22 @@ function displayUnderscores() {
         return;
       }
     }
-    alert("Win");
     winCount++;
     winCountDisplay.innerText = "Wins: " + winCount;
-    resetGame();
-    console.log(underscoresContainer);
-  }
+      alert("YOU WON")
+      resetGame();
+      return;
+}
 
-  // RESET THE GAME
+  
+// RESET THE GAME
 function resetGame() {
     correctAnswer = "";
     userLives = 10;
     livesSpan.innerText = userLives;
     displayLetter.innerText = "";
     underscoresContainer.innerHTML = "";
+    openYouWinModal()
     getRandomWord();
     displayUnderscores();
   }
@@ -129,8 +132,21 @@ function resetGame() {
     hintButton.addEventListener("click", (event) => {
       showClue.innerText = "CLUE: " + `${hint}`;
     });
+    
   }
-  
+
+// GAME OVER POP UP FUNCTION 
+function openPlayAgainModal(){
+  const modal = document.getElementById("playAgainModal")
+  modal.style.display = "block"
+}
+
+function closePlayAgainModal(){
+  const modal = document.getElementById("playAgainModal")
+  modal.style.display = "none"
+}
   
   getRandomWord();
   displayUnderscores();
+  
+  

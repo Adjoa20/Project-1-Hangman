@@ -63,5 +63,3 @@ celebritiesButton.addEventListener('click', () => {
     select4()
     alert('You Selected This Category')
 })
-
-

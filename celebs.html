@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="celebs.js" defer></script>
     <link rel="stylesheet" href="celebs.css" />
-    <title>Hangman: TV Show Game</title>
+    <title>Hangman: Celebs Game</title>
   </head>
   <body>
     <!-- BUTTON USER TO RETURN BACK TO THE MAIN MENU -->
@@ -30,6 +30,7 @@
     <div id="hintContainer"></div>
     <p id="clue"><span id= "clue">CLUE:</span></p>  
     <button class="hint" id="hint">HINT</button>
+    
      
     <!-- OPTION FOR USER TO RETURN BACK TO PICK ANOTHER CATEGORY TO PLAY -->
     <button
@@ -38,6 +39,12 @@
       id="return-back">GO BACK </button>
 
     <!-- NEW GAME POP UP -->
-    <div id="play-again" class="play-again-popup"></div>
+    <div id="playAgainModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePlayAgainModal()"></span>
+            <p>GAME OVER</p>
+        <button id="play-again" onclick="closePlayAgainModal()">PLAY AGAIN</button>
+    </div>
+
   </body>
 </html>

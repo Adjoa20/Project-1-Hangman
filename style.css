@@ -18,45 +18,66 @@ button{
     margin-right: auto;
 }
 
+#label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #main-menu{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: black;
     color: whitesmoke;
 }
 
  #fashion-button{ 
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: black;
     color: whitesmoke;
 }
 
 #music-button{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: black;
     color: whitesmoke;
 }
 
 #movies-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: black;
     color: whitesmoke;
 
 }
 
 #tv-button{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: black;
     color: whitesmoke;
 
 }
 
 #celebrities-button{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: black;
     color: whitesmoke;
 
 }
-
-#answer-button{
-    background-color: burlywood;
-    color: black;
-}
-
-#play-again{
-    background-color:moccasin;
-    color: black;
-} 

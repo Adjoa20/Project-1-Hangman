@@ -38,6 +38,11 @@
       id="return-back">GO BACK  </button>
 
     <!-- NEW GAME POP UP -->
-    <div id="play-again" class="play-again-popup"></div>
+    <div id="playAgainModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePlayAgainModal()"></span>
+            <p>GAME OVER</p>
+        <button id="play-again" onclick="closePlayAgainModal()">PLAY AGAIN</button>
+    </div>
   </body>
 </html>

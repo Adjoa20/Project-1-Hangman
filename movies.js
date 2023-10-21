@@ -92,7 +92,7 @@ function displayUnderscores() {
       userLives--;
       livesSpan.innerText = userLives;
       if (userLives === 0) {
-        alert("Over");
+        openPlayAgainModal();
         resetGame();
         return;
       }
@@ -103,7 +103,7 @@ function displayUnderscores() {
         return;
       }
     }
-    alert("Win");
+    alert("YOU WON");
     winCount++;
     winCountDisplay.innerText = "Wins: " + winCount;
     resetGame();
@@ -131,6 +131,17 @@ function resetGame() {
     });
   }
   
+  // GAME OVER POP UP FUNCTION 
+function openPlayAgainModal(){
+  const modal = document.getElementById("playAgainModal")
+  modal.style.display = "block"
+}
+
+function closePlayAgainModal(){
+  const modal = document.getElementById("playAgainModal")
+  modal.style.display = "none"
+}
+
   
   getRandomWord();
   displayUnderscores();
