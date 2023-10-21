@@ -1,33 +1,29 @@
-// ANSWERS AND HONTS 
-const musicList = [ 
+// ANSWER AND HINTS FOR MOVIES GAMES
+movieList = [
     {
-        answer: 'New Orleans',
-        hint: 'Jazz originated in which city in the United States?',
+        answer: 'American Psycho',
+        hint: 'In what movie does someone get hit in the face with an ax while listening to “Hip to Be Square”?',
     },
     {
-        answer: 'Swing',
-        hint: 'What is the term used to describe the rhythmic pattern in jazz that emphasizes the offbeats?',
+        answer: 'Paranormal Activiy',
+        hint: 'Which horror movie was filmed in just 7 days?',
     },
     {
-        answer: 'Jay-Z',
-        hint: 'The Black Album was released by which artist?',
+        answer: 'Midsommar',
+        hint: 'In which horror film do a group of American students get involved in a Swedish cult?',
     },
     {
-        answer: 'Beyonce',
-        hint: 'This R&B Diva was born in the city of Houston and apart of the 1990s girl group ',
+        answer: 'Dawn Of The Dead',
+        hint: 'Which George A. Romero movie takes places in a mall?',
     },
     {
-        answer: 'Kendrick Lamar',
-        hint: 'Which hip-hop artist is the first to have won a Pulitzer Prize?',
+        answer: 'Psycho',
+        hint: 'What horror movie features a serial killer named Norman Bates?',
     },
     {
-        answer: 'Beastie Boys',
-        hint: 'Hello Nasty was an album by which hip-hop band formed in 1981?',
+        answer: 'Alien',
+        hint: 'Which sci fi horror film had the tagline In space no one can hear you scream?',
     },
-    {
-        answer: 'Redman',
-        hint: 'Which of these was not an official part of Wu Tang Clan/s nine members?',
-    }
 ]
 
 // COUNTING THE USER'S LIVES
@@ -71,8 +67,8 @@ for (let i = 65; i <= 90; i++) {
   }
 
   // FUNCTION FOR A RANDOM ANS
-function getRandomMusicAns() {
-    return musicList[Math.floor(Math.random() * musicList.length)];
+function getRandomMovieAns() {
+    return movieList[Math.floor(Math.random() * movieList.length)];
   }
 
   // FUNCTION TO DISPLAY UNDERSCORES WITH ANSWERS
@@ -127,7 +123,7 @@ function resetGame() {
   
   // GET ANSWER WITH HINT
   function getRandomWord() {
-    const { answer, hint } = getRandomMusicAns();
+    const { answer, hint } = getRandomMovieAns();
     correctAnswer = answer;
   
     hintButton.addEventListener("click", (event) => {
@@ -138,4 +134,3 @@ function resetGame() {
   
   getRandomWord();
   displayUnderscores();
-  

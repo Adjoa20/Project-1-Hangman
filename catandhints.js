@@ -1,33 +1,5 @@
 
 
-
-movieList = [
-    {
-        answer: 'American Psycho',
-        hint: 'In what movie does someone get hit in the face with an ax while listening to “Hip to Be Square”?',
-    },
-    {
-        answer: 'Paranormal Activiy',
-        hint: 'Which horror movie was filmed in just 7 days?',
-    },
-    {
-        answer: 'Midsommar',
-        hint: 'In which horror film do a group of American students get involved in a Swedish cult?',
-    },
-    {
-        answer: 'Dawn Of The Dead',
-        hint: 'Which George A. Romero movie takes places in a mall?',
-    },
-    {
-        answer: 'Psycho',
-        hint: 'What horror movie features a serial killer named Norman Bates?',
-    },
-    {
-        answer: 'Alien',
-        hint: 'Which sci fi horror film had the tagline In space no one can hear you scream?',
-    },
-]
-
 const tvShowsList = [
     {
         answer: 'Twin Peaks',
