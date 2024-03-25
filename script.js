@@ -37,6 +37,7 @@ function select5(){
 }
 
 
+
 // ADDED IN EVENT LISTENERS
 const fashionButton = document.getElementById('fashion-button')
 fashionButton.addEventListener('click', () => {
@@ -61,5 +62,10 @@ tvButton.addEventListener('click', () => {
 const celebritiesButton = document.getElementById('celebrities-button')
 celebritiesButton.addEventListener('click', () => {
     select4()
+    alert('You Selected This Category')
+})
+const menuButton = document.getElementById('menu-button')
+menuButton.addEventListener('click', () => {
+    select5()
     alert('You Selected This Category')
 })
