@@ -15,7 +15,7 @@ Celebrities
 <!-- WHAT WAS USED -->
 * JavaScript
 * HTML
-* CSS3
+* CSS
 
 
 
